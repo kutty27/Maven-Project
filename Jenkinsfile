@@ -22,6 +22,7 @@ pipeline
                 
             }
         }
+    }
     
     post
     {
@@ -30,4 +31,5 @@ pipeline
             emailext body: 'summary', subject: 'Pipeline status', to: 'kuttyspartan999@gmail.com'
         }
     }
+
 }
