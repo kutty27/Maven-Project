@@ -1,14 +1,21 @@
 pipeline
 {
     agent any
+
+    tools
+    {
+        //Maven installation
+        maven "Maven_Home"
+    }
     
     stages
     {
-        stage('compile')
+        stage('Build')
         {
             steps
             {
-                echo 'Compile stage'
+                //Git repository
+                
             }
         }
         
