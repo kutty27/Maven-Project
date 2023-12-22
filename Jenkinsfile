@@ -15,26 +15,13 @@ pipeline
             steps
             {
                 //Git repository
+                git 'https://github.com/kutty27/Maven-Project.git'
+
+                //Run maven comnd
+                bat "mvn -Dmaven.test.failure.ignore=true clean package"
                 
             }
         }
-        
-        stage('Build')
-        {
-            steps
-            {
-                echo 'Build stage'
-            }
-        }
-        
-        stage('Test')
-        {
-            steps
-            {
-                echo 'Test stage'
-            }
-        }
-    }
     
     post
     {
