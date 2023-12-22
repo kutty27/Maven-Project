@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Junit Tests" default="compile" basedir=".">
+ 
+<target name="compile">
+	<javac includeantruntime="true" srcdir="src" destdir="bin" includes="**/*.java"></javac>
+</target>
+
+
+</project>
