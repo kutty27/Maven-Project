@@ -1,0 +1,24 @@
+name: Maven Build, Compile, and Test Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Maven project
+        run: mvn clean install
+        if: success()
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Run Maven tests
+        run: mvn test
