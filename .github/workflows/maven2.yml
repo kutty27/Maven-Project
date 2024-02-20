@@ -1,7 +1,9 @@
 name: Maven Build, Compile, and Test Workflow
 
 on:
-  workflow_dispatch
+  push:
+    branches:
+      - master
 
 jobs:
   build:
